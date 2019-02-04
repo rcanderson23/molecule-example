@@ -21,6 +21,11 @@ GCE
 * Export your project id, service account email, and path to credentials as the following env variables `GCE_PROJECT_ID`, `GCE_SERVICE_ACCOUNT_EMAIL`, `GCE_CREDENTIALS_FILE`. These are the environment variables the molecule playbooks will look to for creating and destroying your testing  
 * Ensure you have your [SSH key setup for GCE](https://cloud.google.com/compute/docs/instances/adding-removing-ssh-keys#project-wide) 
 
+EC2
+------------
+* Set default region by exporting EC2_REGION (ex: export EC2_REGION=us-west-2)
+* Set AMI and Subnet ID in `molecule.yml`
+
 Running Tests
 ===========
 
@@ -31,3 +36,7 @@ Docker
 GCE
 ----------
 `molecule test -s gce`
+
+EC2
+----------
+`molecule test -s aws`
